@@ -34,21 +34,31 @@ function activate(context) {
         })
         const editor = vscode.window.activeTextEditor;
         const jsonBody = editor.document.getText(editor.selection);
-
         req.send({ "Body": jsonBody })
+        vscode.window.withProgress({
+            location: vscode.ProgressLocation.Notification,
+            title: "Creating APEX code.",
+            cancellable: false
+        }, (progress, token) => {
+            token.onCancellationRequested(() => {
+                console.log("User canceled the long running operation");
+            });
 
-        req.end(function(res) {
-            if (res.error) throw new Error(res.error)
-            const msg = res.body;
-            if (msg == 'Error in Json decoding, please check.') {
-                vscode.window.showErrorMessage(msg);
-                //vscode.window.showInformationMessage(msg);
-            } else {
-                clipboardy.writeSync(msg);
-                vscode.window.showInformationMessage('Apex generator created successfully \n and copied to clip board.');
-            }
-            console.log(res.body)
-        })
+            var p = new Promise(resolve => {
+                req.end(function(res) {
+                    if (res.error) throw new Error(res.error)
+                    const msg = res.body;
+                    if (msg == 'Error in Json decoding, please check.') {
+                        vscode.window.showErrorMessage(msg);
+                    } else {
+                        clipboardy.writeSync(msg);
+                        vscode.window.showInformationMessage('Apex generator created successfully \n and copied to clip board.');
+                    }
+                    resolve();
+                })
+            });
+            return p;
+        });
 
     });
 
