@@ -14,7 +14,7 @@
 - Open Command Pallet usign `SHIFT+CTRL+P` and select `JASPEX: Create JSON Generator From Selected Text`. 
 
 
-![SELECT Option](Images/selectoption.GIF) 
+![SELECT Option](Images/selectoption.gif) 
 
 
 - If operation done successfully your APEX code will be copied on ClipBoard.
@@ -23,7 +23,7 @@
 - Press CTRL+V to Paste it inside your code.
 
 
-![Paste Code](Images/pastecode.GIF)
+![Paste Code](Images/pastecode.gif)
 
   
   
