@@ -8,7 +8,7 @@
 - To use this tool select you JSON in vscode. 
 
 
-![SELECT JSON](Images\copycode.GIF) 
+![SELECT JSON](Images/copycode.gif) 
 
 
 - Open Command Pallet usign `SHIFT+CTRL+P` and select `JASPEX: Create JSON Generator From Selected Text`. 
