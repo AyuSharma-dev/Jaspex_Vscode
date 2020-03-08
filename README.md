@@ -1,3 +1,9 @@
+\!\[JASPEX\]\(Images\LogoImage.PNG\)
+
+> This tool helps you to convert your hard coded JSON into APEX JSON GENERATOR class code automatically. 
+
+
+## Features
 
 ![SELECT JSON](http://g.recordit.co/A13wW0nAkn.gif)
  
