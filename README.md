@@ -8,13 +8,13 @@
 - To use this tool select you JSON in vscode. 
 
 
-![SELECT JSON](Images\copycode.gif) 
+![SELECT JSON](Images\copycode.GIF) 
 
 
 - Open Command Pallet usign `SHIFT+CTRL+P` and select `JASPEX: Create JSON Generator From Selected Text`. 
 
 
-![SELECT Option](Images\selectoption.gif) 
+![SELECT Option](Images\selectoption.GIF) 
 
 
 - If operation done successfully your APEX code will be copied on ClipBoard.
@@ -23,7 +23,7 @@
 - Press CTRL+V to Paste it inside your code.
 
 
-![Paste Code](Images\pastecode.gif)
+![Paste Code](Images\pastecode.GIF)
 
   
   
