@@ -30,7 +30,16 @@
 ## For more information
 
 
-- Github Repo : https://github.com/AyuSharma-dev/Jaspex_Vscode
+# Support
+Reach out to me at one of the following places!
+- <a href="https://twitter.com/AyushSh06594329" target="_blank">Twitter</a>
+- <a href="https://www.linkedin.com/in/ayush-sharma-%E2%98%81-75b55613a/" target="_blank">Linkedin</a>
+- <a href="https://github.com/ayushsharma84444" target="_blank">Github Profile</a>
+
+---
+
+# License
+- <a href="http://opensource.org/licenses/mit-license.php" >MIT license</a>  
 
 
 
