@@ -1,7 +1,7 @@
 {
-    "name": "Jaspex",
-    "displayName": "Jaspex",
-    "description": "Convert Json into Apex JSON generator class.",
+    "name": "JASPEX",
+    "displayName": "JASPEX",
+    "description": "Convert Json into Salesforce Apex JSON generator class.",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.42.0"
