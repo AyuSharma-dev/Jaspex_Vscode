@@ -1,4 +1,4 @@
-\!\[JASPEX\]\(Images\LogoImage.PNG\)
+![JASPEX\](Images/LogoImage.PNG?raw=true "Title")
 
 > This tool helps you to convert your hard coded JSON into APEX JSON GENERATOR class code automatically. 
 
