@@ -30,7 +30,7 @@
 ## For more information
 
 
-- Github Repo :
+- Github Repo : https://github.com/AyuSharma-dev/Jaspex_Vscode
 
 
 
