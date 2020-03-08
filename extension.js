@@ -18,43 +18,42 @@ function activate(context) {
     // Now provide the implementation of the command with  registerCommand
     // The commandId parameter must match the command field in package.json
     let disposable = vscode.commands.registerCommand('extension.generateapex', function() {
-        // The code you place here will be executed every time your command is executed
 
-        // Display a message box to the user
-        //const editor = vscode.window.activeTextEditor;;
-        //const text = editor.document.getText(editor.selection);
-        var unirest = require("unirest");
+        // Importing reuired modules. Unirest for API calling and Clipboardy for copy results in clipboard.
+        const unirest = require("unirest");
         const clipboardy = require('clipboardy')
 
+        // Setting Endpoint to JASPEX api.
         var req = unirest("GET", "https://jaspex.herokuapp.com/api/generateApexAPI")
 
         req.headers({
             "cache-control": "no-cache",
             'Content-Type': 'application/json'
         })
-        const editor = vscode.window.activeTextEditor;
+
+
+        const editor = vscode.window.activeTextEditor; // Getting selected Text JSON 
         const jsonBody = editor.document.getText(editor.selection);
-        req.send({ "Body": jsonBody })
+        req.send({ "Body": jsonBody }) // Setting API Body with the copied JSON response
+
+        // Progress showing notification
         vscode.window.withProgress({
             location: vscode.ProgressLocation.Notification,
             title: "Creating APEX code.",
             cancellable: false
         }, (progress, token) => {
-            token.onCancellationRequested(() => {
-                console.log("User canceled the long running operation");
-            });
 
             var p = new Promise(resolve => {
                 req.end(function(res) {
                     if (res.error) throw new Error(res.error)
                     const msg = res.body;
                     if (msg == 'Error in Json decoding, please check.') {
-                        vscode.window.showErrorMessage(msg);
+                        vscode.window.showErrorMessage(msg); // IF failed set the Error msg.
                     } else {
-                        clipboardy.writeSync(msg);
+                        clipboardy.writeSync(msg); // If success copy the API returned code in
                         vscode.window.showInformationMessage('Apex generator created successfully \n and copied to clip board.');
                     }
-                    resolve();
+                    resolve(); // Return resolve after api Calling.
                 })
             });
             return p;
