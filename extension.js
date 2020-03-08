@@ -41,7 +41,7 @@ function activate(context) {
             location: vscode.ProgressLocation.Notification,
             title: "Creating APEX code.",
             cancellable: false
-        }, (progress, token) => {
+        }, () => {
 
             var p = new Promise(resolve => {
                 req.end(function(res) {
