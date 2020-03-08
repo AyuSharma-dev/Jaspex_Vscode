@@ -6,6 +6,7 @@
     "author": {
         "name": "Ayush Sharma"
     },
+    "publisher": "Ayush",
     "engines": {
         "vscode": "^1.42.0"
     },
