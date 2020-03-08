@@ -1,19 +1,35 @@
 {
-    "name": "JASPEX",
+    "name": "jaspex",
     "displayName": "JASPEX",
     "description": "Convert Json into Salesforce Apex JSON generator class.",
     "version": "0.0.1",
+    "author": {
+        "name": "Ayush Sharma"
+    },
     "engines": {
         "vscode": "^1.42.0"
     },
-    "categories": [
-        "Other"
+    "keywords": [
+        "salesforce", "apex", "json", "json generator", "convert"
     ],
+    "categories": [
+        "Formatters", "Programming Languages", "Snippets"
+    ],
+    "icon": "Images/icon.PNG",
     "activationEvents": [
         "onCommand:extension.generateapex"
     ],
+    "galleryBanner": {
+        "color": "#C80000",
+        "theme": "dark"
+    },
     "main": "./extension.js",
     "contributes": {
+        "languages": [{
+            "id": "Apex",
+            "aliases": ["Apex", "Apex"],
+            "extensions": [".cls"]
+        }],
         "commands": [{
             "command": "extension.generateapex",
             "title": "JASPEX: Create JSON Generator From Selected Text"
@@ -34,6 +50,10 @@
         "mocha": "^7.0.1",
         "typescript": "^3.7.5",
         "vscode-test": "^1.3.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AyuSharma-dev/Jaspex_Vscode"
     },
     "dependencies": {
         "clipboardy": "^2.2.0",
