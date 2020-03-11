@@ -3,7 +3,7 @@
 > This tool helps you to convert your hard coded JSON into APEX JSON GENERATOR class code automatically. 
 
 
-## Features
+## How to use.
 
 - To use this tool select you JSON in vscode. 
 
@@ -26,7 +26,12 @@
 ![Paste Code](Images/pastecode.gif)
 
   
-  
+## Features
+
+- Create Json generator object from Selected Text.
+- Creaet Json generator object from Copied Text.
+
+
 ## For more information
 
 
