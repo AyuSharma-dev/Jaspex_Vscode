@@ -34,11 +34,11 @@
         }],
         "commands": [{
                 "command": "extension.generateapex",
-                "title": "JASPEX: Create JSON Generator Object From Selected Text"
+                "title": "JSON To APEX: Create JSON Generator Object From Selected Text"
             },
             {
                 "command": "extension.generateapexfromcopy",
-                "title": "JASPEX: Create JSON Generator Object From Copied JSON."
+                "title": "JSON To APEX: Create JSON Generator Object From Copied JSON."
             }
         ]
     },
