@@ -2,7 +2,7 @@
     "name": "jsontoapex",
     "displayName": "JSON To APEX",
     "description": "Convert Json into Salesforce Apex JSON generator class.",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "author": {
         "name": "Ayush Sharma"
     },
@@ -11,10 +11,16 @@
         "vscode": "^1.42.0"
     },
     "keywords": [
-        "salesforce", "apex", "json", "json generator", "convert"
+        "salesforce",
+        "apex",
+        "json",
+        "json generator",
+        "convert"
     ],
     "categories": [
-        "Formatters", "Programming Languages", "Snippets"
+        "Formatters",
+        "Programming Languages",
+        "Snippets"
     ],
     "icon": "Images/icon.png",
     "activationEvents": [
@@ -27,12 +33,20 @@
     },
     "main": "./extension.js",
     "contributes": {
-        "languages": [{
-            "id": "Apex",
-            "aliases": ["Apex", "Apex"],
-            "extensions": [".cls"]
-        }],
-        "commands": [{
+        "languages": [
+            {
+                "id": "Apex",
+                "aliases": [
+                    "Apex",
+                    "Apex"
+                ],
+                "extensions": [
+                    ".cls"
+                ]
+            }
+        ],
+        "commands": [
+            {
                 "command": "extension.generateapex",
                 "title": "JSON To APEX: Create JSON Generator Object From Selected Text"
             },
