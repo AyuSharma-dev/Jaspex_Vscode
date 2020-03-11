@@ -32,10 +32,10 @@
 - Creaet Json generator object from Copied Text.
 
 
-## For more information
+## Installation
 
 
-- Github Repo : https://github.com/AyuSharma-dev/Jaspex_Vscode
+- Visual Studio Market place : https://marketplace.visualstudio.com/items?itemName=AyuSharma-dev.jsontoapex
 
 
 
