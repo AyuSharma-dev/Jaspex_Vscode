@@ -1,12 +1,12 @@
 {
-    "name": "jaspex",
-    "displayName": "JASPEX",
+    "name": "jsontoapex",
+    "displayName": "JSON To APEX",
     "description": "Convert Json into Salesforce Apex JSON generator class.",
     "version": "0.0.1",
     "author": {
         "name": "Ayush Sharma"
     },
-    "publisher": "Ayush",
+    "publisher": "AyuSharma-dev",
     "engines": {
         "vscode": "^1.42.0"
     },
@@ -16,12 +16,13 @@
     "categories": [
         "Formatters", "Programming Languages", "Snippets"
     ],
-    "icon": "Images/icon.PNG",
+    "icon": "Images/icon.png",
     "activationEvents": [
-        "onCommand:extension.generateapex"
+        "onCommand:extension.generateapex",
+        "onCommand:extension.generateapexfromcopy"
     ],
     "galleryBanner": {
-        "color": "#C80000",
+        "color": "black",
         "theme": "dark"
     },
     "main": "./extension.js",
@@ -32,9 +33,14 @@
             "extensions": [".cls"]
         }],
         "commands": [{
-            "command": "extension.generateapex",
-            "title": "JASPEX: Create JSON Generator From Selected Text"
-        }]
+                "command": "extension.generateapex",
+                "title": "JASPEX: Create JSON Generator Object From Selected Text"
+            },
+            {
+                "command": "extension.generateapexfromcopy",
+                "title": "JASPEX: Create JSON Generator Object From Copied JSON."
+            }
+        ]
     },
     "scripts": {
         "lint": "eslint .",
