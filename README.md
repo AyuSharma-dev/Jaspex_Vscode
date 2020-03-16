@@ -2,6 +2,7 @@
 
 > This tool helps you to convert your hard coded JSON into APEX JSON GENERATOR class code automatically. 
 
+---
 
 ## How to use.
 
@@ -25,18 +26,27 @@
 
 ![Paste Code](Images/pastecode.gif)
 
+---
   
 ## Features
 
-- Create Json generator object from Selected Text.
-- Creaet Json generator object from Copied Text.
+- Create Json generator object from Selected JSON.
+- Creaet Json generator object from Copied JSON.
+- Create Json generator object from Selected Quoted JSON.
 
+>
+    ![Quoted JSON conversion](Images/quotedConversion.gif)
+>
+
+- Create Json generator object from Copied Quoted JSON.
+
+---
 
 ## Installation
 
 
 - Github repo : https://github.com/AyuSharma-dev/Jaspex_Vscode
 
-
+---
 
 **Enjoy!**

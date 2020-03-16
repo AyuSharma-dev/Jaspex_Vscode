@@ -24,25 +24,39 @@ function activate(context) {
 
         const editor = vscode.window.activeTextEditor; // Getting selected Text JSON 
         const jsonBody = editor.document.getText(editor.selection);
-        getJsonFromJASPEX(jsonBody);
+        getJsonFromJASPEX(jsonBody, false);
 
     });
 
     let generateApexFromCopiedText = vscode.commands.registerCommand('extension.generateapexfromcopy', function() {
         vscode.env.clipboard.readText().then((text) => {
-            getJsonFromJASPEX(text);
+            getJsonFromJASPEX(text, false);
         });
     });
 
-    context.subscriptions.push(generateApexFromSelectedText);
-    context.subscriptions.push(generateApexFromCopiedText);
+    let generateApexFromSelectedQuotedText = vscode.commands.registerCommand('extension.generateapexfromquotedjson', function() {
+        const editor = vscode.window.activeTextEditor; // Getting selected Text JSON 
+        const jsonBody = editor.document.getText(editor.selection);
+        getJsonFromJASPEX(jsonBody, true);
+    });
+
+    let generateApexFromCopiedQuotedText = vscode.commands.registerCommand('extension.generateapexfromcopiedquotedjson', function() {
+        vscode.env.clipboard.readText().then((text) => {
+            getJsonFromJASPEX(text, true);
+        });
+    });
+
+    context.subscriptions.push(generateApexFromSelectedText,
+        generateApexFromCopiedText,
+        generateApexFromSelectedQuotedText,
+        generateApexFromCopiedQuotedText);
 }
 exports.activate = activate;
 
 // this method is called when your extension is deactivated
 function deactivate() {}
 
-function getJsonFromJASPEX(jsonBody) {
+function getJsonFromJASPEX(jsonBody, quoted) {
     // Setting Endpoint to JASPEX api.
     var req = unirest("GET", "https://jaspex.herokuapp.com/api/generateApexAPI")
 
@@ -52,7 +66,7 @@ function getJsonFromJASPEX(jsonBody) {
     });
 
     // Setting API Body with the copied JSON response
-    req.send({ "Body": jsonBody })
+    req.send({ "Body": jsonBody, "quoted": quoted })
 
     // Progress showing notification
     vscode.window.withProgress({

@@ -25,7 +25,9 @@
     "icon": "Images/icon.png",
     "activationEvents": [
         "onCommand:extension.generateapex",
-        "onCommand:extension.generateapexfromcopy"
+        "onCommand:extension.generateapexfromcopy",
+        "onCommand:extension.generateapexfromquotedjson",
+        "onCommand:extension.generateapexfromcopiedquotedjson"
     ],
     "galleryBanner": {
         "color": "black",
@@ -33,26 +35,31 @@
     },
     "main": "./extension.js",
     "contributes": {
-        "languages": [
-            {
-                "id": "Apex",
-                "aliases": [
-                    "Apex",
-                    "Apex"
-                ],
-                "extensions": [
-                    ".cls"
-                ]
-            }
-        ],
-        "commands": [
-            {
+        "languages": [{
+            "id": "Apex",
+            "aliases": [
+                "Apex",
+                "Apex"
+            ],
+            "extensions": [
+                ".cls"
+            ]
+        }],
+        "commands": [{
                 "command": "extension.generateapex",
-                "title": "JSON To APEX: Create JSON Generator Object From Selected Text"
+                "title": "JSON To APEX: Create JSON Generator Object From Selected JSON"
             },
             {
                 "command": "extension.generateapexfromcopy",
                 "title": "JSON To APEX: Create JSON Generator Object From Copied JSON."
+            },
+            {
+                "command": "extension.generateapexfromquotedjson",
+                "title": "JSON To APEX: Create JSON Generator Object From Selected Quoted JSON."
+            },
+            {
+                "command": "extension.generateapexfromcopiedquotedjson",
+                "title": "JSON To APEX: Create JSON Generator Object From Copied Quoted JSON."
             }
         ]
     },
