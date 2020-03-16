@@ -45,7 +45,7 @@
 ## Installation
 
 
-- Github repo : https://github.com/AyuSharma-dev/Jaspex_Vscode
+- Visual Studio Market place : https://marketplace.visualstudio.com/items?itemName=AyuSharma-dev.jsontoapex
 
 ---
 
