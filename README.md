@@ -35,7 +35,7 @@
 - Create Json generator object from Selected Quoted JSON.
 
 >
-    ![Quoted JSON conversion](Images/quotedConversion.gif)
+![Quoted JSON conversion](Images/quotedConversion.gif)
 >
 
 - Create Json generator object from Copied Quoted JSON.
